@@ -15,7 +15,7 @@ Este projeto consiste no desenvolvimento de um portfólio online (currículo dig
 ## Funcionalidades
 
 * Navegação entre páginas (menu fixo)
-* Layout responsivo (adaptado para celular)
+* Layout responsivo (adaptado para celular - podendo melhorar muito ainda)
 * Tema claro/escuro com persistência
 * Formulário de contato com validação em JavaScript
 * Interface moderna com efeitos visuais (hover e transições)
