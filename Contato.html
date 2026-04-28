@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="description" content="Página de contato do portfólio de Adriano C. Rodrigues">
+
+  <title>Contato</title>
+
+  <link rel="stylesheet" href="style.css">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<header class="topo">
+
+  <!-- Logo -->
+  <div class="logo">
+    <h1>A.C.R.</h1>
+    <p>ALUNO</p>
+  </div>
+
+  <!-- Menu de navegação -->
+  <nav class="menu">
+    <!-- Links para outras páginas do site -->
+    <a href="index.html">SOBRE MIM</a>
+    <a href="formacao.html">FORMAÇÃO</a>
+    <a href="portfolio.html">PORTFÓLIO</a>
+    <a href="contato.html">CONTATO</a>
+
+    <!-- Botão para alternar tema (claro/escuro) -->
+    <button 
+      id="toggleTema" 
+      class="btn-tema"
+      aria-label="Alternar tema claro e escuro">
+      ☯
+    </button>
+
+  </nav>
+
+</header>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<main>
+
+  <!-- HERO (seção principal de destaque) -->
+  <section class="hero">
+
+      <div class="caixa contato">
+        <!-- Caixa principal do formulário -->
+
+      <!-- Título da página -->
+      <h1>Contato</h1>
+
+      <!-- FORMULÁRIO DE CONTATO -->
+      <form id="formContato">
+
+        <!-- CAMPO NOME -->
+        <label for="nome">Nome</label>
+        <input 
+          type="text" 
+          id="nome" 
+          placeholder="Seu nome" 
+          required>
+
+        <!-- Mensagem de erro do nome -->
+        <small class="erro" id="erroNome"></small>
+
+        <!-- CAMPO EMAIL -->
+        <label for="email">E-mail</label>
+        <input 
+          type="email" 
+          id="email" 
+          placeholder="Seu e-mail" 
+          required>
+
+        <!-- Mensagem de erro do email -->
+        <small class="erro" id="erroEmail"></small>
+
+        <!-- CAMPO MENSAGEM -->
+        <label for="mensagem">Mensagem</label>
+        <textarea 
+          id="mensagem" 
+          placeholder="Sua mensagem" 
+          required></textarea>
+
+        <!-- Mensagem de erro da mensagem -->
+        <small class="erro" id="erroMensagem"></small>
+
+        <!-- BOTÃO ENVIAR -->
+        <button type="submit">Enviar</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+<footer>
+  <p>&copy; 2026 - Portfólio pessoal</p>
+</footer>
+
+<!-- Importação do JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

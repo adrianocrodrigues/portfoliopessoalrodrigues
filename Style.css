@@ -1,0 +1,480 @@
+/* =========================
+   BASE (CONFIGURAÇÃO GLOBAL)
+========================= */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   TOPO (HEADER)
+========================= */
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+/* LOGO */
+.logo h1 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #00d4ff;
+}
+
+/* =========================
+   HERO (FUNDO PRINCIPAL)
+========================= */
+
+.hero {
+  height: 100vh;
+  background-image: url("img/Fundo.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* overlay escuro transparente */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+/* conteúdo acima do overlay */
+.hero .caixa {
+  position: relative;
+  z-index: 2;
+}
+
+/* modo escuro */
+body.dark .hero::before {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   CAIXA PRINCIPAL
+========================= */
+
+.caixa {
+  padding: 60px 90px;
+  text-align: center;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  max-width: 90%;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* modo claro */
+body:not(.dark) .caixa {
+  background: rgba(255, 255, 255, 0.6);
+  color: #000;
+}
+
+/* modo escuro */
+body.dark .caixa {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+/* efeito hover */
+.caixa:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* hover claro */
+body:not(.dark) .caixa:hover {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+/* hover escuro */
+body.dark .caixa:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* suaviza mudanças de cor */
+.caixa * {
+  transition: color 0.4s ease;
+}
+
+/* =========================
+   PERFIL
+========================= */
+
+.perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* imagem de perfil */
+.perfil img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.perfil img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   TEXTO PERFIL
+========================= */
+
+.texto-perfil h2 {
+  margin: 5px 0;
+}
+
+/* =========================
+   ANIMAÇÃO HINT
+========================= */
+
+.hint {
+  margin-top: 15px;
+  font-size: 12px;
+  opacity: 0.8;
+  animation: pulse 1.5s infinite;
+  letter-spacing: 0.5px;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-2px); }
+  100% { opacity: 0.4; transform: translateY(0); }
+}
+
+/* =========================
+   INFO EXTRA (EXPANDÍVEL)
+========================= */
+
+.info-extra {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* ativo via JS */
+.info-extra.ativo {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* cards informativos */
+.info-card {
+  width: 220px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* modo escuro */
+body.dark .info-card {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+body.dark .info-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* =========================
+   PROJETOS (PORTFÓLIO)
+========================= */
+
+.projetos {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+  width: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+/* imagem do card */
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* título */
+.card h3 {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* link */
+.card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #00d4ff;
+  font-weight: bold;
+}
+
+/* hover card */
+.card:hover {
+  transform: translateY(-8px);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.card:hover h3,
+.card:hover a {
+  color: white;
+}
+
+/* modo escuro */
+body.dark .card {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+body.dark .card:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* =========================
+   CONTATO (FORMULÁRIO)
+========================= */
+
+.caixa.contato {
+  backdrop-filter: blur(8px);
+  padding: 50px;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 15px;
+}
+
+/* inputs */
+.caixa.contato input,
+.caixa.contato textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* claro */
+body:not(.dark) .caixa.contato input,
+body:not(.dark) .caixa.contato textarea {
+  background: #fff;
+  color: #000;
+}
+
+/* escuro */
+body.dark .caixa.contato input,
+body.dark .caixa.contato textarea {
+  background: #222;
+  color: #fff;
+}
+
+/* foco */
+.caixa.contato input:focus,
+.caixa.contato textarea:focus {
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+}
+
+.caixa.contato textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* botão */
+.caixa.contato button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.caixa.contato button:hover {
+  background: #444;
+}
+
+/* =========================
+   ERROS / VALIDAÇÃO
+========================= */
+
+.erro {
+  font-size: 12px;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* erro claro/escuro */
+body:not(.dark) .erro { color: #000; }
+body.dark .erro { color: #fff; }
+
+/* inputs erro/sucesso */
+.input-erro {
+  box-shadow: 0 0 5px red;
+  border: 1px solid red;
+}
+
+.input-sucesso {
+  box-shadow: 0 0 5px #00d4ff;
+  border: 1px solid #00d4ff;
+}
+
+/* hover força visibilidade */
+.caixa:hover .erro {
+  color: #fff !important;
+}
+
+/* =========================
+   BOTÃO TEMA
+========================= */
+
+.btn-tema {
+  margin-left: 20px;
+  font-size: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.btn-tema:hover {
+  color: #00d4ff;
+  transform: scale(1.1);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* modo claro */
+body:not(.dark) footer {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+/* modo escuro */
+body.dark footer {
+  background-color: #000;
+  color: #fff;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+  .topo {
+    padding: 15px 20px;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .menu a {
+    margin: 10px;
+  }
+
+  .caixa {
+    padding: 30px 20px;
+  }
+
+  .hero {
+    min-height: 100vh;
+    height: auto;
+  }
+}
+ 

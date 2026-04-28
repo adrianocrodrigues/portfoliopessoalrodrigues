@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="description" content="Portfólio pessoal de Adriano C. Rodrigues - Currículo online">
+  
+  <title>Sobre Mim</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <!-- Fundamental para o designer do site, pois é aqui que ocorrer a importação do arquivo de estilos CSS -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Aqui está a maneira responsiva - Faz o site se adaptar a telas de celular -->
+
+</head>
+
+<body>
+
+<header class="topo">
+  
+  <!-- Logo -->
+  <div class="logo">
+    <h1>A.C.R.</h1>
+    <p>ALUNO</p>
+  </div>
+
+  <!-- Menu de navegação -->
+  <nav class="menu">
+    <!-- Links para outras páginas do site -->
+    <a href="index.html">SOBRE MIM</a>
+    <a href="formacao.html">FORMAÇÃO</a>
+    <a href="portfolio.html">PORTFÓLIO</a>
+    <a href="contato.html">CONTATO</a>
+
+    <!-- Botão para alternar tema (claro/escuro) -->
+    <button 
+      id="toggleTema" 
+      class="btn-tema"
+      aria-label="Alternar tema claro e escuro">
+      ☯
+    </button> 
+  </nav>
+
+</header>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<main>
+
+  <!-- HERO (seção principal de destaque) -->
+  <section class="hero">
+
+    <div class="caixa">
+      <!-- Container geral do conteúdo -->
+
+      <!-- PERFIL COM FOTO -->
+      <div class="perfil">
+
+        <img src="img/perfil.jpeg" alt="Foto de perfil do aluno">
+        <!-- Imagem de perfil -->
+
+        <div class="texto-perfil">
+          <h2>ADRIANO C. RODRIGUES</h2>
+          <h2>RU 4998791</h2>
+        </div>
+
+      </div>
+
+      <!-- INDICATIVO DE INTERAÇÃO PISCANTE PARA CHAMAR A ATENÇÃO -->
+      <p class="hint"> Clique no card para saber mais sobre mim</p>
+
+      <!-- INFORMAÇÕES EXTRAS (Busca lá no JavaScript) -->
+      <div id="infoExtra" class="info-extra">
+
+        <div class="info-card">
+          <!-- Card 1 -->
+          <h3>Informações pessoais</h3>
+          <p>
+            Sou estudante da faculdade Uninter de Ciênca da Computação. Estudando no momento o desenvolvimento web, com foco em HTML, CSS e JavaScript. 
+            Busco evoluir constantemente na área de tecnologia.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <!-- Card 2 -->
+          <h3>Hobbies</h3>
+          <p>
+            Gosto de tecnologia, jogos, programação e aprender novas ferramentas 
+            para desenvolvimento web. Além de escrever e desenvolver histórias em quadrinhos. 
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+<footer>
+  
+  <p>&copy; 2026 - Portfólio pessoal</p>
+</footer>
+
+<!-- Importa o arquivo JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
