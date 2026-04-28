@@ -24,7 +24,7 @@ Este projeto consiste no desenvolvimento de um portfólio online (currículo dig
 
 ## Estrutura do Projeto
 
-* `sobre.html` → Sobre mim
+* `index.html` → Sobre mim
 * `formacao.html` → Formação acadêmica
 * `portfolio.html` → Projetos desenvolvidos
 * `contato.html` → Formulário de contato
