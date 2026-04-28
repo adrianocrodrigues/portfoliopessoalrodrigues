@@ -44,7 +44,7 @@ RU: 4998791
 
 O projeto pode ser publicado gratuitamente utilizando o GitHub Pages.
 
-*(Após publicar, adicione aqui o link do seu site)*
+https://adrianocrodrigues.github.io/portfoliopessoalrodrigues
 
 ---
 
